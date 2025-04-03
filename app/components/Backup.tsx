@@ -1,5 +1,3 @@
-// import { CheckCircle, Shield, LineChart } from 'lucide-react';
-// import { Progress } from "@/components/ui/progress";
 import Image from 'next/image';
 import progress from '../../public/div.svg'
 const Backup = () => {

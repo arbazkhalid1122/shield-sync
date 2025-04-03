@@ -13,7 +13,7 @@ const config: Config = {
                 background: "hsl(var(--background))",
                 foreground: "hsl(var(--foreground))",
                 border: {
-                    DEFAULT: "hsl(var(--border))", // Ensure border is correctly defined
+                    DEFAULT: "hsl(var(--border))",
                 },
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",

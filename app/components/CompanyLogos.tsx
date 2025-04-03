@@ -1,14 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 import { SiVodafone } from "react-icons/si";
-import nasa from '../../public/nasa.svg';
 import hp from '../../public/hp.svg';
 import trello from '../../public/trello.svg';
 import philips from '../../public/philips.svg';
 import w from '../../public/w.svg';
-import warnerbros from '../../public/warner-bros.svg';
-import accenture from '../../public/accenture.svg';
-import bristol from '../../public/bristol.svg';
 import { SiTesla } from "react-icons/si";
 import { TiVendorMicrosoft } from "react-icons/ti";
 import { SiNasa } from "react-icons/si";
