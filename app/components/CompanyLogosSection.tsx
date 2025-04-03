@@ -1,9 +1,12 @@
 import CompanyLogos from "./CompanyLogos";
 import FeatureCard from "./FeatureCard";
+import { MdBackup } from "react-icons/md";
+import { FaLock } from "react-icons/fa";
+import { FiRefreshCcw } from "react-icons/fi";
 
 export default function CompanyLogosSection() {
     return (
-        <section className="px-4 bg-gradient-to-b from-white to-cloud-light">
+        <section className="p-4 bg-gradient-to-b from-white to-cloud-light">
             <section className="px-4 bg-gradient-to-b from-white to-[#F8FAFC]">
                 <div className="container mx-auto max-w-6xl">
                     {/* Main Headline */}
@@ -33,19 +36,19 @@ export default function CompanyLogosSection() {
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                             <FeatureCard
-                                // icon={<Cloud size={28} />}
+                                icon={<MdBackup color="#0E1E4B" size={30} />}
                                 title="Automated Cloud Backups"
                                 description="Schedule and manage backups for AWS S3, Azure Blob & GCP Storage"
                             />
 
                             <FeatureCard
-                                // icon={<Lock size={28} />}
+                                icon={<FaLock color="#0E1E4B" size={30} />}
                                 title="Immutable & Encrypted Storage"
                                 description="Prevent ransomware attacks with AES-256 encryption"
                             />
 
                             <FeatureCard
-                                // icon={<RefreshCcw size={28} />}
+                                icon={<FiRefreshCcw color="#0E1E4B" size={30} />}
                                 title="One-Click Data Recovery"
                                 description="Instantly restore files and folders from cloud backups"
                             />

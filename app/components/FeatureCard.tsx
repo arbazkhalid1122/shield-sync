@@ -1,19 +1,19 @@
 import React, { ReactNode } from 'react';
 
 interface FeatureCardProps {
-    // icon: ReactNode;
+    icon: ReactNode;
     title: string;
     description: string;
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ title, description }) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => {
     return (
-        <div className="bg-white rounded-lg p-8 shadow-sm text-center">
-            <div className="rounded-full bg-[#0E1E4B] w-14 h-14 flex items-center justify-center mx-auto mb-5 text-white">
-                {/* {icon} */}
+        <div className="bg-white rounded-lg p-6 py-3 shadow-sm text-start text-[#0F0E47]">
+            <div className="rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-1 text-white">
+                {icon}
             </div>
-            <h3 className="text-[#0E1E4B] font-semibold text-lg mb-3">{title}</h3>
-            <p className="text-gray-600 text-sm">{description}</p>
+            <h3 className="font-semibold text-lg">{title}</h3>
+            <p className="text-sm">{description}</p>
         </div>
     );
 };

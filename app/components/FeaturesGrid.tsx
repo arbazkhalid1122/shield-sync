@@ -10,13 +10,7 @@ export default function Home() {
 
 
     return (
-        <div className="min-h-screen bg-gray-100 p-4">
-            <Head>
-                <title>Backup Solution UI</title>
-                <meta name="description" content="Backup Solution UI" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
+        <div className="p-4">
             <main className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-4">
                 {/* Rapid, reliable recovery - Takes up 5 columns */}
                 <div className="bg-[#8686AC] p-6 rounded-lg shadow-sm md:col-span-7">
