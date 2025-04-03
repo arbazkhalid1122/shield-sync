@@ -8,8 +8,8 @@ const PricingSection: React.FC = () => {
     const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
 
     return (
-        <section className="py-16 px-4 max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0e1128] mb-10">
+        <section className="py-16 px-8 bg-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0F0E47] mb-10">
                 Simple, Transparent Pricing
             </h2>
 

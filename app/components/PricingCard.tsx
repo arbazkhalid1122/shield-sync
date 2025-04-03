@@ -1,6 +1,6 @@
 
 import React from 'react';
-// import { Check } from 'lucide-react';
+import { FaCheck } from "react-icons/fa6";
 
 interface PricingFeature {
     text: string;
@@ -29,7 +29,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
                 }`}
         >
             {isPopular && (
-                <div className="absolute top-0 right-8 -translate-y-1/2 bg-[#0e1128] text-white text-sm font-medium py-1 px-3 rounded-md">
+                <div className="absolute top-0 right-0 bg-[#0F0E47] text-white text-sm font-medium py-1 px-3 rounded-bl-lg rounded-tr-lg">
                     Popular
                 </div>
             )}
@@ -43,7 +43,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
             <ul className="space-y-2 mb-6">
                 {features.map((feature, index) => (
                     <li key={index} className="flex items-center">
-                        {/* <Check size={16} className={`mr-2 ${isHighlighted ? 'text-white' : 'text-[#0e1128]'}`} /> */}
+                        <FaCheck size={16} className={`mr-2 ${isHighlighted ? 'text-white' : 'text-[#0F0E47]'}`} />
                         <span className="text-sm">{feature.text}</span>
                     </li>
                 ))}
@@ -51,8 +51,8 @@ const PricingCard: React.FC<PricingCardProps> = ({
             <button
                 className={`w-full py-2 rounded-md text-center text-sm font-medium 
           ${isHighlighted
-                        ? 'bg-[#0e1128] text-white'
-                        : 'bg-[#0e1128] text-white'
+                        ? 'bg-[#0F0E47] text-white'
+                        : 'bg-[#0F0E47] text-white'
                     }`}
             >
                 {ctaText}

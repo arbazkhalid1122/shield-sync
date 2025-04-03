@@ -1,27 +1,28 @@
-
 'use client'
 import React, { useState } from 'react';
-// import { ChevronDown } from "lucide-react";
+import { IoChevronDownOutline } from "react-icons/io5";
 
 interface FAQItem {
     question: string;
     answer: string;
 }
 
-const faqItems: FAQItem[] = [
+const faqData: FAQItem[] = [
     {
         question: "How does ShieldSync secure my backups?",
         answer: "We use AES-256 encryption and immutable storage to ensure your backups are completely secure and protected against ransomware attacks."
     },
     {
-        question: "Can I restore files instantly?",
-        answer: "Yes, our platform allows for immediate file restoration with just a few clicks. Our quick recovery system ensures minimal downtime for your business."
+        question: "What is your refund policy?",
+        answer: "We offer a 30-day money-back guarantee on all purchases."
     },
     {
-        question: "What happens if I exceed my storage?",
-        answer: "If you exceed your storage limit, you'll receive a notification. You can either upgrade your plan for more storage or manage your existing backups to free up space."
+        question: "How do I recover lost data?",
+        answer: "You can restore lost data by logging into your account and following the recovery instructions in the dashboard."
     }
 ];
+
+
 
 const FAQSection = () => {
     const [openItem, setOpenItem] = useState<number | null>(null);
@@ -31,31 +32,32 @@ const FAQSection = () => {
     };
 
     return (
-        <section className="w-full bg-[#f9f9fb] py-16">
+        <section className="w-full py-16 text-[#0F0E47]">
             <div className="container mx-auto px-4 max-w-4xl">
-                <h2 className="text-[#1A1F2C] text-3xl md:text-4xl font-semibold text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12">
                     Frequently Asked Questions
                 </h2>
+                <div className='flex flex-col gap-4'>
+                    {faqData.map((item, index) => (
+                        <div key={index} className="bg-white rounded-lg shadow-sm">
+                            <div className={`border-b last:border-b-0`}>
+                                <button
+                                    onClick={() => toggleItem(index)}
+                                    className="w-full py-5 px-6 flex justify-between items-center text-left focus:outline-none"
+                                >
+                                    <span className="font-medium text-base">{item.question}</span>
+                                    <IoChevronDownOutline
+                                        className={`h-5 w-5 transition-transform duration-200 ${openItem === index ? 'transform rotate-180' : ''
+                                            }`}
+                                    />
+                                </button>
 
-                <div className="bg-white rounded-lg shadow-sm">
-                    {faqItems.map((item, index) => (
-                        <div key={index} className={`border-b last:border-b-0`}>
-                            <button
-                                onClick={() => toggleItem(index)}
-                                className="w-full py-5 px-6 flex justify-between items-center text-left focus:outline-none"
-                            >
-                                <span className="text-[#1A1F2C] font-medium text-base">{item.question}</span>
-                                {/* <ChevronDown
-                                    className={`h-5 w-5 text-[#1A1F2C] transition-transform duration-200 ${openItem === index ? 'transform rotate-180' : ''
+                                <div
+                                    className={`overflow-hidden transition-all duration-300 ${openItem === index ? 'max-h-96 px-6 pb-5 ' : 'max-h-0'
                                         }`}
-                                /> */}
-                            </button>
-
-                            <div
-                                className={`px-6 pb-5 text-gray-600 overflow-hidden transition-all duration-300 ${openItem === index ? 'max-h-96' : 'max-h-0'
-                                    }`}
-                            >
-                                {openItem === index && <div className="pt-1">{item.answer}</div>}
+                                >
+                                    {openItem === index && <div className="pt-1">{item.answer}</div>}
+                                </div>
                             </div>
                         </div>
                     ))}
@@ -66,3 +68,6 @@ const FAQSection = () => {
 };
 
 export default FAQSection;
+
+
+

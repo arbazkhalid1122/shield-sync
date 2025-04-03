@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { FcBusinessman } from "react-icons/fc";
 
 interface TestimonialProps {
     name: string;
@@ -12,7 +13,9 @@ const Testimonial: React.FC<TestimonialProps> = ({ name, title, company, quote }
     return (
         <div className="bg-white rounded-lg p-6 shadow-sm">
             <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                <div className="w-12 h-12 mr-4">
+                    <FcBusinessman className="w-full h-full rounded-full  bg-gray-300" />
+                </div>
                 <div>
                     <h4 className="font-medium text-[#0E1E4B]">{name}</h4>
                     <p className="text-sm text-gray-600">{title}, {company}</p>
@@ -46,7 +49,7 @@ const TestimonialsSection: React.FC = () => {
     ];
 
     return (
-        <section className="bg-gray-50 py-16">
+        <section className="py-16">
             <div className="container mx-auto max-w-6xl px-4">
                 <h2 className="text-center text-3xl md:text-4xl font-bold text-[#0E1E4B] mb-12">
                     What Our Customers Say
