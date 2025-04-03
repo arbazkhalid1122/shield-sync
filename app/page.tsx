@@ -1,7 +1,3 @@
-import Image from "next/image"
-import Link from "next/link"
-import FeatureCard from "./components/FeatureCard"
-import CompanyLogos from "./components/CompanyLogos"
 import Backup from "./components/Backup"
 import TestimonialsSection from "./components/TestimonialsSection"
 import PricingSection from "./components/PricingSection"
@@ -15,17 +11,10 @@ import CompanyLogosSection from "./components/CompanyLogosSection"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
-      {/* Navigation */}
+    <main className="min-h-screen bg-[#F4F6FA] text-[#4B5563]">
       <Navbar />
-
-      {/* Hero Section */}
       <HeroSection />
-
-      {/* Features Grid */}
       <FeaturesGrid />
-
-
       <CompanyLogosSection />
       <Backup />
       <TestimonialsSection />
