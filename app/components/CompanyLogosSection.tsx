@@ -3,8 +3,8 @@ import FeatureCard from "./FeatureCard";
 
 export default function CompanyLogosSection() {
     return (
-        <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-white to-cloud-light">
-            <section className="px-4 py-16 md:py-24 bg-gradient-to-b from-white to-[#F8FAFC]">
+        <section className="px-4 bg-gradient-to-b from-white to-cloud-light">
+            <section className="px-4 bg-gradient-to-b from-white to-[#F8FAFC]">
                 <div className="container mx-auto max-w-6xl">
                     {/* Main Headline */}
                     <h1 className="text-navy text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6" />
@@ -24,10 +24,9 @@ export default function CompanyLogosSection() {
             </section>
 
             {/* Features Section */}
-            <section className="px-4 py-16 md:py-24 bg-cloud">
+            <section className="bg-cloud">
                 <section className="px-4 py-16 md:py-24 bg-[#F1F5F9]">
                     <div className="container mx-auto max-w-6xl">
-                        <h2 className="text-navy text-2xl md:text-3xl font-bold text-center mb-12" />
                         <h2 className="text-[#0E1E4B] text-2xl md:text-3xl font-bold text-center mb-12">
                             Key Features
                         </h2>
