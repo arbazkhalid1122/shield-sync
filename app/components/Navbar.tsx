@@ -18,15 +18,15 @@ export default function Navbar() {
                 </div>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex space-x-6">
-                    <Link href="#" className="text-gray-700 hover:text-gray-900">Features</Link>
-                    <Link href="#" className="text-gray-700 hover:text-gray-900">Solutions</Link>
-                    <Link href="#" className="text-gray-700 hover:text-gray-900">Pricing</Link>
-                    <Link href="#" className="text-gray-700 hover:text-gray-900">FAQ</Link>
+                <div className="md:flex space-x-6 menu-links">
+                    <Link href="#">Features</Link>
+                    <Link href="#">Solutions</Link>
+                    <Link href="#">Pricing</Link>
+                    <Link href="#">FAQ</Link>
                 </div>
 
                 {/* Login & Sign Up */}
-                <div className="hidden md:flex items-center space-x-4">
+                <div className="actions md:flex items-center space-x-4">
                     <Link href="#" className="text-gray-600 hover:text-gray-900">Login</Link>
                     <Link href="#" className="bg-[#1a1147] text-white px-4 py-2 rounded-md text-sm">Start Free Trial</Link>
                 </div>

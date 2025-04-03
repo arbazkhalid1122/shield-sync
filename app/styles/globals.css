@@ -24,3 +24,33 @@ body {
   color: var(--foreground);
   font-family: 'Inter', sans-serif;
 }
+
+/* Hide on medium and smaller screens, show on large screens and above */
+.menu-links {
+  display: flex;
+  gap: 1.5rem;
+  /* Space between links */
+}
+
+.actions .login,
+.actions .trial {
+  display: block;
+}
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+/* Media query for medium screens and smaller */
+@media (max-width: 768px) {
+  .menu-links {
+    display: none;
+    /* Hide menu links on smaller screens */
+  }
+
+  .actions {
+    display: none;
+    /* Hide Login and Start Free Trial on smaller screens */
+  }
+
+}
