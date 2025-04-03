@@ -1,7 +1,7 @@
 export default function HeroSection() {
     return (
         <section className="container mx-auto px-4 py-12 text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a1147] mb-4 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl text-[#1a1147] mb-4 leading-tight">
                 Effortless Cloud Storage Backups for
                 <span className="inline md:block">
                     <span className="bg-gradient-to-r ml-[10px] from-[#1a1147] via-gray-500 to-gray-300 bg-clip-text text-transparent">

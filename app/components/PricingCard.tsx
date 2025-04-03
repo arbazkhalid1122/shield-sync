@@ -35,7 +35,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
             )}
             <h3 className="text-sm font-medium mb-2">{title}</h3>
             <div className="mb-4">
-                <span className={`text-3xl font-semibold ${isHighlighted ? 'text-white' : 'text-[#0e1128]'}`}>
+                <span className={`text-3xl ${isHighlighted ? 'text-white' : 'text-[#0e1128]'}`}>
                     {price}
                 </span>
                 {price !== "Custom" && <span className="text-sm">/mo</span>}

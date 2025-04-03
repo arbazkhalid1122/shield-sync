@@ -5,7 +5,7 @@ const CTASection = () => {
     return (
         <section className="w-full bg-white py-20 text-[#0F0E47] text-center">
             <div className="container mx-auto px-4">
-                <h2 className=" text-3xl md:text-4xl font-semibold  mb-4">
+                <h2 className=" text-3xl md:text-4xl mb-4">
                     Start Protecting Your Cloud Data Today
                 </h2>
                 <p className="mb-8">

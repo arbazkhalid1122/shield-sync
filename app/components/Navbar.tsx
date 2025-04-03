@@ -14,7 +14,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <div className="flex items-center">
                     <Image src={Shield} alt="ShieldSync Logo" width={25} height={25} />
-                    <span className="text-lg font-semibold text-[#0F0E47] ml-2">ShieldSync</span>
+                    <span className="text-lg text-[#0F0E47] ml-2">ShieldSync</span>
                 </div>
 
                 {/* Desktop Menu */}

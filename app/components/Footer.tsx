@@ -12,7 +12,7 @@ const Footer = () => {
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-2">
                                 <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" fill="white" />
                             </svg>
-                            <span className="font-bold text-lg">ShieldSync</span>
+                            <span className="text-lg">ShieldSync</span>
                         </div>
                         <p className="text-gray-400 text-sm">
                             Secure cloud backup solutions for modern businesses

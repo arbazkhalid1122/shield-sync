@@ -6,7 +6,7 @@ const Backup = () => {
     return (
         <section className="px-4 py-10 bg-white md:py-12">
             <div className="container mx-auto max-w-6xl">
-                <h1 className="text-[#0E1E4B] text-3xl md:text-4xl font-bold text-center mb-16">
+                <h1 className="text-[#0E1E4B] text-3xl md:text-4xl text-center mb-16">
                     Why ShieldSync?
                 </h1>
 

@@ -9,7 +9,7 @@ const PricingSection: React.FC = () => {
 
     return (
         <section className="py-16 px-8 bg-white">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0F0E47] mb-10">
+            <h2 className="text-3xl md:text-4xl text-center text-[#0F0E47] mb-10">
                 Simple, Transparent Pricing
             </h2>
 
