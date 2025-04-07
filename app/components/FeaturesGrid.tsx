@@ -5,6 +5,9 @@ import FR from '../../public/FR.svg'
 import NLST from '../../public/NLST.svg'
 import Bar from '../../public/Bar.svg'
 import Image from 'next/image';
+import { FaCheck } from "react-icons/fa6";
+
+import RecoveryTimeBox from './RecoveryTime';
 
 export default function Home() {
 
@@ -13,26 +16,48 @@ export default function Home() {
         <div className="p-4">
             <main className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-4">
                 {/* Rapid, reliable recovery - Takes up 5 columns */}
-                <div className="bg-[#8686AC] p-6 rounded-lg shadow-sm md:col-span-7">
-                    <h2 className="text-xl font-semibold text-gray-900">Rapid, reliable recovery</h2>
-                    <p className="text-gray-700 mb-6 text-sm w-[60%]">
-                        Recover anything—from a single file to your entire production instance complete with network configurations—in seconds.
-                    </p>
+                <div className="flex justify-between bg-[#8686AC] p-6 rounded-lg shadow-sm md:col-span-7">
+                    <div className='flex flex-col gap-2'>
+                        <div className='max-w-[328px]'>
+                            <h2 className="text-xl font-semibold mt-4 text-[#0F0E47]">Rapid, reliable recovery</h2>
+                            <p className="text-[#4B5563] mb-6 text-sm">
+                                Recover anything—from a single file to your entire production instance complete with network configurations—in seconds.
+                            </p>
+                        </div>
+                        <div className="flex items-start bg-white rounded-lg w-[fit-content] py-6 px-4 shadow-sm max-w-[328px]">
 
-                    <div className="space-y-3 gap-4 flex flex-wrap">
-                        <div className="bg-white rounded-lg w-[fit-content] py-2 px-4 shadow-sm">
+                            <label className="inline-flex items-center me-2 cursor-pointer">
+                                <input type="checkbox" value="" className="sr-only peer" style={{
+                                    outline: 'none',
+                                    border: 'none',
+                                    background: 'none',
+                                }} />
+                                <div className="relative w-11 h-6 bg-gray-200 rounded-full peer dark:bg-[#70cf98] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#70cf98] dark:peer-checked:bg-[#70cf98]"></div>
+
+                            </label>
                             <p className="text-gray-800 text-sm">
                                 <span className="font-medium">Capture VPC Settings</span>
                                 <br />
                                 <span className="text-xs">Automatically capture changes in network configurations</span>
                             </p>
                         </div>
+                    </div>
+
+                    <div className="space-y-3 flex flex-col min-w-[200px]">
+                        <RecoveryTimeBox
+                            value={30}
+                            maxValue={60}
+                            label="recovery time"
+                        />
+
 
                         <div className="flex flex-col gap-3">
-                            <div className="bg-white rounded-full py-2 px-4 shadow-sm">
+                            <div className="flex gap-1 bg-white items-center rounded-full p-2 shadow-sm">
+                                <FaCheck className="text-[#70cf98]" />
                                 <p className="text-gray-800 text-sm">DR of encrypted resources</p>
                             </div>
-                            <div className="bg-white rounded-full py-2 px-4 shadow-sm">
+                            <div className="flex gap-1 bg-white items-center rounded-full p-2 shadow-sm">
+                                <FaCheck className="text-[#70cf98]" />
                                 <p className="text-gray-800 text-sm">Orchestrated failover/drills</p>
                             </div>
                         </div>
@@ -41,27 +66,27 @@ export default function Home() {
 
                 {/* Automated cost savings - Takes up 7 columns */}
                 <div className="bg-[#8686AC] p-6 rounded-lg shadow-sm md:col-span-5">
-                    <h2 className="text-xl font-semibold text-gray-900">Automated cost savings</h2>
-                    <p className="text-gray-700 mb-6 text-sm">
+                    <h2 className="text-xl font-semibold mb-2 mt-2 text-[#0F0E47]">Automated cost savings</h2>
+                    <p className="text-[#4B5563] text-sm max-w-[350px]">
                         Reduce storage and compute costs automatically — with N2WS Resource Control, storage-optimized archiving and ZeroEBS.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-3">
-                        <div className="bg-white rounded-lg py-3 px-4 shadow-sm flex-[1.3]">
+                    <div className="flex flex-col sm:flex-row gap-3 mt-10">
+                        <div className="bg-white rounded-lg py-5 px-4 shadow-sm flex-[1.3]">
                             <p className="text-gray-600 text-xs">Compute savings</p>
-                            <p className="text-gray-900 text-xl font-bold">$1,248<span className="text-gray-600">.75</span></p>
+                            <p className="text-[#0F0E47] text-xl font-bold">$1,248<span className="text-gray-600">.75</span></p>
                         </div>
-                        <div className="bg-white rounded-lg py-3 px-4 shadow-sm flex-1">
+                        <div className="bg-white rounded-lg py-5 px-4 shadow-sm flex-1">
                             <p className="text-gray-600 text-xs">Storage savings</p>
-                            <p className="text-gray-900 text-xl font-bold">98%</p>
+                            <p className="text-[#0F0E47] text-xl font-bold">98%</p>
                         </div>
                     </div>
                 </div>
 
                 {/* Data sovereignty and security - Takes up 5 columns */}
                 <div className="bg-[#8686AC] p-6 rounded-lg shadow-sm md:col-span-5 ">
-                    <h2 className="text-xl font-semibold text-gray-900">Data sovereignty and security</h2>
-                    <p className="text-gray-700 mb-6 text-sm">
+                    <h2 className="text-xl font-semibold text-[#0F0E47]">Data sovereignty and security</h2>
+                    <p className="text-[#4B5563] mb-6 text-sm">
                         Reduce your attack surface. Get total control over your environment with N2WS, for complete peace of mind.
                     </p>
 
@@ -81,8 +106,8 @@ export default function Home() {
                 <div className="bg-[#8686AC] p-6 rounded-lg shadow-sm md:col-span-7 ">
                     <div className='flex gap-2'>
                         <div>
-                            <h2 className="text-xl font-semibold text-gray-900">Multi-cloud management</h2>
-                            <p className="text-gray-700 mb-4 text-sm">
+                            <h2 className="text-xl font-semibold text-[#0F0E47]">Multi-cloud management</h2>
+                            <p className="text-[#4B5563] mb-4 text-sm">
                                 Easily manage all backup & recovery policies in different accounts, regions, and clouds—in one console.
                             </p>
 
