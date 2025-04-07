@@ -17,11 +17,11 @@ const Backup = () => {
                         {/* Feature 1 */}
                         <div className="flex">
                             <div className="mr-4">
-                                <FaCircleCheck className="h-6 w-6 text-black" />
+                                <FaCircleCheck size={24} className="text-black" />
                             </div>
                             <div>
-                                <h3 className="text-sm font-semibold text-[#0E1E4B] mb-1">100% Automated Cloud Storage Backup</h3>
-                                <p className="text-gray-600 text-sm">No manual intervention required</p>
+                                <h3 className="text-xs text-[#0F0E47]">100% Automated Cloud Storage Backup</h3>
+                                <p className="text-[#4B5563] mt-2 text-sm">No manual intervention required</p>
                             </div>
                         </div>
 
@@ -31,8 +31,8 @@ const Backup = () => {
                                 <FaShield className="h-6 w-6 text-black" />
                             </div>
                             <div>
-                                <h3 className="text-sm font-semibold text-[#0E1E4B] mb-1">Ransomware Protection</h3>
-                                <p className="text-gray-600 text-sm">Backups remain untouchable with immutable storage</p>
+                                <h3 className="text-xs text-[#0F0E47]">Ransomware Protection</h3>
+                                <p className="text-[#4B5563] mt-2 text-sm">Backups remain untouchable with immutable storage</p>
                             </div>
                         </div>
 
@@ -42,8 +42,8 @@ const Backup = () => {
                                 <RiLineChartFill className="h-6 w-6 text-black" />
                             </div>
                             <div>
-                                <h3 className="text-sm font-semibold text-[#0E1E4B] mb-1">Affordable & Scalable</h3>
-                                <p className="text-gray-600 text-sm">Pay-as-you-grow model tailored for SMBs</p>
+                                <h3 className="text-xs text-[#0F0E47]">Affordable & Scalable</h3>
+                                <p className="text-[#4B5563] mt-2 text-sm">Pay-as-you-grow model tailored for SMBs</p>
                             </div>
                         </div>
                     </div>
@@ -51,9 +51,9 @@ const Backup = () => {
                     {/* Backup Status Card */}
                     <div className="flex items-center justify-center rounded-lg h-[fit-content] w-[fit-content] p-8 bg-[#F4F6FA]">
                         <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
-                            <div className="flex justify-between mb-4">
-                                <h3 className="font-semibold text-[#0E1E4B]">Backup Status</h3>
-                                <span className="text-sm text-gray-600">Last backup: 2 min ago</span>
+                            <div className="flex text-base text-[#0F0E47] justify-between mb-4">
+                                <span>Backup Status</span>
+                                <span className='text-[#4B5563]'>Last backup: 2 min ago</span>
                             </div>
                             <Image src={progress} alt="Progress" className="w-full h-auto mb-4" />
                         </div>

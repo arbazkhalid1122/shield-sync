@@ -15,14 +15,14 @@ const Testimonial: React.FC<TestimonialProps> = ({ name, title, company, quote }
         <div className="bg-white rounded-lg p-6 shadow-sm">
             <div className="flex items-center mb-4">
                 <div className="w-12 h-12 mr-4">
-                    <FcBusinessman className="w-full h-full rounded-full  bg-gray-300" />
+                    <FcBusinessman className="w-full h-full rounded-full bg-gray-300" />
                 </div>
-                <div>
-                    <h4 className="font-medium text-[#0E1E4B]">{name}</h4>
-                    <p className="text-sm text-gray-600">{title}, {company}</p>
+                <div className='text-base'>
+                    <p className="text-[#0F0E47]">{name}</p>
+                    <p className=" ext-[#4B5563]">{title}, {company}</p>
                 </div>
             </div>
-            <p className="text-gray-700 text-sm leading-relaxed">"{quote}"</p>
+            <p className="text-[#4B5563] text-sm leading-relaxed">"{quote}"</p>
             <div className='flex gap-1 mt-2'>
                 {[1, 1, 1, 1, 1].map((_, index) => (
                     <FaStar key={index} color='#fbaf35' className="" />

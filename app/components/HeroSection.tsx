@@ -8,7 +8,7 @@ export default function HeroSection() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentPlatformIndex((prevIndex) => (prevIndex + 1) % platforms.length);
-        }, 2000);
+        }, 1500);
 
         return () => clearInterval(interval); // Cleanup interval on component unmount
     }, []);

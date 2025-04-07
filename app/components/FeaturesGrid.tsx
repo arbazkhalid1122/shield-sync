@@ -16,53 +16,6 @@ export default function Home() {
         <div className="p-4">
             <main className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-4">
                 {/* Rapid, reliable recovery - Takes up 5 columns */}
-                {/* <div className="flex flex-wrap gap-2 justify-between bg-[#8686AC] p-6 rounded-lg shadow-sm md:col-span-7">
-                    <div className='flex flex-col gap-2'>
-                        <div className='max-w-[328px]'>
-                            <h2 className="text-xl font-semibold mt-4 text-[#0F0E47]">Rapid, reliable recovery</h2>
-                            <p className="text-[#4B5563] mb-6 text-sm">
-                                Recover anything—from a single file to your entire production instance complete with network configurations—in seconds.
-                            </p>
-                        </div>
-                        <div className="flex items-start bg-white rounded-lg w-[fit-content] py-6 px-4 shadow-sm max-w-[328px]">
-
-                            <label className="inline-flex items-center me-2 cursor-pointer">
-                                <input type="checkbox" value="" className="sr-only peer" style={{
-                                    outline: 'none',
-                                    border: 'none',
-                                    background: 'none',
-                                }} />
-                                <div className="relative w-11 h-6 bg-gray-200 rounded-full peer dark:bg-[#70cf98] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#70cf98] dark:peer-checked:bg-[#70cf98]"></div>
-
-                            </label>
-                            <p className="text-gray-800 text-sm">
-                                <span className="font-medium">Capture VPC Settings</span>
-                                <br />
-                                <span className="text-xs">Automatically capture changes in network configurations</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="space-y-3 flex flex-col min-w-[200px]">
-                        <RecoveryTimeBox
-                            value={30}
-                            maxValue={60}
-                            label="recovery time"
-                        />
-
-
-                        <div className="flex flex-col gap-3">
-                            <div className="flex gap-1 bg-white items-center rounded-full p-2 shadow-sm">
-                                <FaCheck className="text-[#70cf98]" />
-                                <p className="text-gray-800 text-sm">DR of encrypted resources</p>
-                            </div>
-                            <div className="flex gap-1 bg-white items-center rounded-full p-2 shadow-sm">
-                                <FaCheck className="text-[#70cf98]" />
-                                <p className="text-gray-800 text-sm">Orchestrated failover/drills</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
                 <div className="flex flex-col md:flex-col lg:flex-row gap-4 bg-[#8686AC] p-6 rounded-lg shadow-sm md:col-span-7 w-full">
                     <div className='flex flex-col gap-4 w-full lg:max-w-[50%]'>
                         <div className='w-full lg:max-w-[328px]'>
@@ -77,9 +30,9 @@ export default function Home() {
                                 <div className="relative w-11 h-6 bg-gray-200 rounded-full peer dark:bg-[#70cf98] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#70cf98] dark:peer-checked:bg-[#70cf98]"></div>
                             </label>
                             <p className="text-gray-800 text-sm">
-                                <span className="font-medium">Capture VPC Settings</span>
+                                <span className="text-xs font-semibold">Capture VPC Settings</span>
                                 <br />
-                                <span className="text-xs">Automatically capture changes in network configurations</span>
+                                <span>Automatically capture changes in network configurations</span>
                             </p>
                         </div>
                     </div>

@@ -25,7 +25,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 }) => {
     return (
         <div
-            className={`relative rounded-lg p-6 border ${isHighlighted ? 'bg-[#8b8bae] border-none text-white' : 'bg-white border-gray-200'
+            className={`relative rounded-lg p-6 border ${isHighlighted ? 'bg-[#8b8bae] border-none text-white' : 'bg-white text-[#0F0E47] border-gray-200'
                 }`}
         >
             {isPopular && (
@@ -33,9 +33,9 @@ const PricingCard: React.FC<PricingCardProps> = ({
                     Popular
                 </div>
             )}
-            <h3 className="text-sm font-medium mb-2">{title}</h3>
+            <h3 className="text-xs mb-2">{title}</h3>
             <div className="mb-4">
-                <span className={`text-3xl ${isHighlighted ? 'text-white' : 'text-[#0e1128]'}`}>
+                <span className={`text-4xl ${isHighlighted ? 'text-white' : 'text-[#0F0E47]'}`}>
                     {price}
                 </span>
                 {price !== "Custom" && <span className="text-sm">/mo</span>}
@@ -44,7 +44,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
                 {features.map((feature, index) => (
                     <li key={index} className="flex items-center">
                         <FaCheck size={16} className={`mr-2 ${isHighlighted ? 'text-white' : 'text-[#0F0E47]'}`} />
-                        <span className="text-sm">{feature.text}</span>
+                        <span className="text-base">{feature.text}</span>
                     </li>
                 ))}
             </ul>

@@ -45,7 +45,7 @@ const FAQSection = () => {
                                     onClick={() => toggleItem(index)}
                                     className="w-full py-5 px-6 flex justify-between items-center text-left focus:outline-none"
                                 >
-                                    <span className="font-medium text-base">{item.question}</span>
+                                    <span className="text-base">{item.question}</span>
                                     <IoChevronDownOutline
                                         className={`h-5 w-5 transition-transform duration-200 ${openItem === index ? 'transform rotate-180' : ''
                                             }`}
@@ -56,7 +56,7 @@ const FAQSection = () => {
                                     className={`overflow-hidden transition-all duration-300 ${openItem === index ? 'max-h-96 px-6 pb-5 ' : 'max-h-0'
                                         }`}
                                 >
-                                    {openItem === index && <div className="pt-1">{item.answer}</div>}
+                                    {openItem === index && <div className="pt-1 text-[#4B5563]">{item.answer}</div>}
                                 </div>
                             </div>
                         </div>

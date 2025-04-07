@@ -8,12 +8,12 @@ const CTASection = () => {
                 <h2 className=" text-3xl md:text-4xl mb-4">
                     Start Protecting Your Cloud Data Today
                 </h2>
-                <p className="mb-8">
+                <p className="mb-8 text-[#4B5563]">
                     Join thousands of SMBs who trust ShieldSync for their cloud backup needs
                 </p>
                 <Link
                     href="/signup"
-                    className="inline-block bg-[#0F0E47] text-white py-3 px-8 rounded font-medium hover:bg-[#1E293B] transition-colors"
+                    className="inline-block bg-[#0F0E47] text-white py-3 px-8 rounded text-lg hover:bg-[#1E293B] transition-colors"
                 >
                     Sign Up for Free
                 </Link>
