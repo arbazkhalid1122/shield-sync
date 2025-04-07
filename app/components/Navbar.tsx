@@ -14,11 +14,11 @@ export default function Navbar() {
                 {/* Logo */}
                 <div className="flex items-center">
                     <Image src={Shield} alt="ShieldSync Logo" width={25} height={25} />
-                    <span className="text-lg text-[#0F0E47] ml-2">ShieldSync</span>
+                    <span className="text-[1.375rem] text-[#0F0E47] ml-2">ShieldSync</span>
                 </div>
 
                 {/* Desktop Menu */}
-                <div className="md:flex space-x-6 menu-links">
+                <div className="md:flex space-x-6 menu-links text-[1.063rem]">
                     <Link href="#">Features</Link>
                     <Link href="#">Solutions</Link>
                     <Link href="#">Pricing</Link>
@@ -28,7 +28,7 @@ export default function Navbar() {
                 {/* Login & Sign Up */}
                 <div className="actions md:flex items-center space-x-4">
                     <Link href="#" className="text-gray-600 hover:text-gray-900">Login</Link>
-                    <Link href="#" className="bg-[#1a1147] text-white px-4 py-2 rounded-md text-sm">Start Free Trial</Link>
+                    <Link href="#" className="bg-[#0F0E47] text-white px-4 py-2 rounded-md">Start Free Trial</Link>
                 </div>
 
                 {/* Mobile Menu Button */}

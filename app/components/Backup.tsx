@@ -1,5 +1,9 @@
 import Image from 'next/image';
 import progress from '../../public/div.svg'
+import { FaCircleCheck } from "react-icons/fa6";
+import { FaShield } from "react-icons/fa6";
+import { RiLineChartFill } from "react-icons/ri";
+
 const Backup = () => {
     return (
         <section className="px-4 py-10 bg-white md:py-12">
@@ -13,7 +17,7 @@ const Backup = () => {
                         {/* Feature 1 */}
                         <div className="flex">
                             <div className="mr-4">
-                                {/* <CheckCircle className="h-6 w-6 text-black" /> */}
+                                <FaCircleCheck className="h-6 w-6 text-black" />
                             </div>
                             <div>
                                 <h3 className="text-sm font-semibold text-[#0E1E4B] mb-1">100% Automated Cloud Storage Backup</h3>
@@ -24,7 +28,7 @@ const Backup = () => {
                         {/* Feature 2 */}
                         <div className="flex">
                             <div className="mr-4">
-                                {/* <Shield className="h-6 w-6 text-black" /> */}
+                                <FaShield className="h-6 w-6 text-black" />
                             </div>
                             <div>
                                 <h3 className="text-sm font-semibold text-[#0E1E4B] mb-1">Ransomware Protection</h3>
@@ -35,7 +39,7 @@ const Backup = () => {
                         {/* Feature 3 */}
                         <div className="flex">
                             <div className="mr-4">
-                                {/* <LineChart className="h-6 w-6 text-black" /> */}
+                                <RiLineChartFill className="h-6 w-6 text-black" />
                             </div>
                             <div>
                                 <h3 className="text-sm font-semibold text-[#0E1E4B] mb-1">Affordable & Scalable</h3>

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { FcBusinessman } from "react-icons/fc";
+import { FaStar } from "react-icons/fa";
 
 interface TestimonialProps {
     name: string;
@@ -22,6 +23,11 @@ const Testimonial: React.FC<TestimonialProps> = ({ name, title, company, quote }
                 </div>
             </div>
             <p className="text-gray-700 text-sm leading-relaxed">"{quote}"</p>
+            <div className='flex gap-1 mt-2'>
+                {[1, 1, 1, 1, 1].map((_, index) => (
+                    <FaStar key={index} color='#fbaf35' className="" />
+                ))}
+            </div>
         </div>
     );
 };
@@ -35,7 +41,7 @@ const TestimonialsSection: React.FC = () => {
             quote: "ShieldSync has simplified our backup strategy across multiple cloud providers. It's reliable and cost-effective."
         },
         {
-            name: "Sarah Johnson",
+            name: "John Doe",
             title: "DevOps Lead",
             company: "CloudTech",
             quote: "The automated backup features and instant recovery options have saved us countless hours of manual work."
