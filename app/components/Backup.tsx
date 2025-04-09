@@ -16,33 +16,33 @@ const Backup = () => {
                     <div className="space-y-12">
                         {/* Feature 1 */}
                         <div className="flex">
-                            <div className="mr-4">
+                            <div className="mr-4 mt-1">
                                 <FaCircleCheck size={24} className="text-black" />
                             </div>
                             <div>
-                                <h3 className="text-xs text-[#0F0E47]">100% Automated Cloud Storage Backup</h3>
+                                <h3 className="text-xl text-[#0F0E47]">100% Automated Cloud Storage Backup</h3>
                                 <p className="text-[#4B5563] mt-2 text-sm">No manual intervention required</p>
                             </div>
                         </div>
 
                         {/* Feature 2 */}
                         <div className="flex">
-                            <div className="mr-4">
+                            <div className="mr-4 mt-1">
                                 <FaShield className="h-6 w-6 text-black" />
                             </div>
                             <div>
-                                <h3 className="text-xs text-[#0F0E47]">Ransomware Protection</h3>
+                                <h3 className="text-xl text-[#0F0E47]">Ransomware Protection</h3>
                                 <p className="text-[#4B5563] mt-2 text-sm">Backups remain untouchable with immutable storage</p>
                             </div>
                         </div>
 
                         {/* Feature 3 */}
                         <div className="flex">
-                            <div className="mr-4">
+                            <div className="mr-4 mt-1">
                                 <RiLineChartFill className="h-6 w-6 text-black" />
                             </div>
                             <div>
-                                <h3 className="text-xs text-[#0F0E47]">Affordable & Scalable</h3>
+                                <h3 className="text-xl text-[#0F0E47]">Affordable & Scalable</h3>
                                 <p className="text-[#4B5563] mt-2 text-sm">Pay-as-you-grow model tailored for SMBs</p>
                             </div>
                         </div>

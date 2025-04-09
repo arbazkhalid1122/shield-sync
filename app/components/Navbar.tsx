@@ -28,7 +28,7 @@ export default function Navbar() {
                 {/* Login & Sign Up */}
                 <div className="actions md:flex items-center space-x-4">
                     <Link href="#" className="text-gray-600 hover:text-gray-900">Login</Link>
-                    <Link href="#" className="bg-[#0F0E47] text-white px-4 py-2 rounded-md">Start Free Trial</Link>
+                    <Link href="#" className="bg-[#0F0E47] text-white px-4 hover:bg-[#1E293B] py-2 rounded-md">Start Free Trial</Link>
                 </div>
 
                 {/* Mobile Menu Button */}

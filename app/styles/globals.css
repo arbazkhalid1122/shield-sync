@@ -55,6 +55,32 @@ body {
 
 }
 
-.Onerem {
-  font-size: 1rem;
+@keyframes floatPulse {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.float-hover:hover {
+  animation: floatPulse 2s ease-in-out infinite;
+  transform: translateY(-5px);
+}
+
+
+.rotate-hover {
+  transition: transform 0.6s ease-in-out;
+}
+
+.rotate-hover:hover {
+  transform: rotate(15deg);
+}
+
+button{
+  cursor: pointer !important;
 }

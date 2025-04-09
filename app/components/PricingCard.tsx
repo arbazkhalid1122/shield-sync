@@ -49,7 +49,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
                 ))}
             </ul>
             <button
-                className={`w-full py-2 rounded-md text-center text-sm font-medium 
+                className={`w-full py-2 rounded-md text-center text-sm font-medium hover:bg-[#1E293B]
           ${isHighlighted
                         ? 'bg-[#0F0E47] text-white'
                         : 'bg-[#0F0E47] text-white'

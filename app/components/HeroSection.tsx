@@ -28,7 +28,7 @@ export default function HeroSection() {
                 all with enterprise-grade security.
             </p>
             <div className="flex flex-col text-lg sm:flex-row justify-center gap-4">
-                <button className="bg-[#0F0E47] text-white px-6 py-3 rounded-md font-medium shadow-md hover:bg-[#100a3d] transition">
+                <button className="bg-[#0F0E47] cursor-pointer hover:bg-[#1E293B] text-white px-6 py-3 rounded-md font-medium shadow-md transition">
                     Start Free Trial
                 </button>
                 <button className="border border-[#D1D5DB] text-[#1F2937] px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">

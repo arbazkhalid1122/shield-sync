@@ -1,8 +1,9 @@
 import CompanyLogos from "./CompanyLogos";
-import FeatureCard from "./FeatureCard";
 import { MdBackup } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
 import { FiRefreshCcw } from "react-icons/fi";
+import LockIcon from "./LockIcon";
+import FeatureCard from "./FeatureCard";
 
 export default function CompanyLogosSection() {
     return (
@@ -29,25 +30,27 @@ export default function CompanyLogosSection() {
             <section className="bg-cloud">
                 <section className="px-4 py-16 md:py-24 bg-[#F1F5F9]">
                     <div className="container mx-auto max-w-6xl">
-                        <h2 className="text-[#0F0E47] text-2xl md:text-3xl text-center mb-12">
+                        <h2 className="text-[#0F0E47] text-3xl md:text-4xl text-center mb-12">
                             Key Features
                         </h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-6">
                             <FeatureCard
                                 icon={<MdBackup color="#0E1E4B" size={26} />}
+                                iconWrapperClassName="float-hover"
                                 title="Automated Cloud Backups"
                                 description="Schedule and manage backups for AWS S3, Azure Blob & GCP Storage"
                             />
 
                             <FeatureCard
-                                icon={<FaLock color="#0E1E4B" size={26} />}
+                                icon={<LockIcon />}
                                 title="Immutable & Encrypted Storage"
                                 description="Prevent ransomware attacks with AES-256 encryption"
                             />
 
                             <FeatureCard
                                 icon={<FiRefreshCcw color="#0E1E4B" size={26} />}
+                                iconWrapperClassName="rotate-hover"
                                 title="One-Click Data Recovery"
                                 description="Instantly restore files and folders from cloud backups"
                             />

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
-
+import shield from '../../public/ShieldFrame.svg'
+import Image from 'next/image';
 const Footer = () => {
     return (
         <footer className="w-full bg-[#0F0E47] text-white py-12">
@@ -8,10 +9,8 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Logo and Description */}
                     <div className="col-span-1">
-                        <div className="flex items-center mb-4">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-2">
-                                <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" fill="white" />
-                            </svg>
+                        <div className="flex items-center gap-1 mb-4">
+                            <Image src={shield} alt='shield' width={20} height={20}/>
                             <span className="text-xl">ShieldSync</span>
                         </div>
                         <p className="  text-[#9CA3AF]">
