@@ -22,7 +22,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* Hide on medium and smaller screens, show on large screens and above */
@@ -52,7 +52,6 @@ body {
     display: none;
     /* Hide Login and Start Free Trial on smaller screens */
   }
-
 }
 
 @keyframes floatPulse {
@@ -72,7 +71,6 @@ body {
   transform: translateY(-5px);
 }
 
-
 .rotate-hover {
   transition: transform 0.6s ease-in-out;
 }
@@ -81,6 +79,22 @@ body {
   transform: rotate(15deg);
 }
 
-button{
+button {
   cursor: pointer !important;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+  will-change: transform, opacity;
 }
