@@ -8,8 +8,25 @@ import Shield from "../../public/ShieldSync.svg";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const menuItems = [
+    { href: "#", label: "Features" },
+    { href: "#", label: "Solutions" },
+    { href: "#", label: "Pricing" },
+    { href: "#", label: "FAQ" },
+  ];
+  const renderMenuLinks = (items: { href: string; label: string }[]) =>
+    items.map(({ href, label }) => (
+      <Link
+        key={label}
+        href={href}
+        className="hover:bg-[#F2F2F2] hover:text-[#0F0E47] px-4 py-2 rounded-md"
+      >
+        {label}
+      </Link>
+    ));
+
   return (
-    <nav className="bg-white shadow-md px-6 py-4">
+    <nav className="bg-white shadow-md text-[#4B5563] px-6 py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
@@ -20,16 +37,16 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="md:flex space-x-6 menu-links text-[1.063rem]">
-          <Link href="#">Features</Link>
-          <Link href="#">Solutions</Link>
-          <Link href="#">Pricing</Link>
-          <Link href="#">FAQ</Link>
+        <div className="md:flex space-x-2 menu-links text-[1.063rem]">
+          {renderMenuLinks(menuItems)}
         </div>
 
         {/* Login & Sign Up */}
         <div className="actions md:flex items-center space-x-4">
-          <Link href="#" className="text-gray-600 hover:text-gray-900">
+          <Link
+            href="#"
+            className="hover:bg-[#F2F2F2] px-4 py-2 rounded-md text-gray-600 hover:text-[#0F0E47]"
+          >
             Login
           </Link>
           <Link
@@ -42,7 +59,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-700 focus:outline-none cursor-pointer"
+          className="md:hidden focus:outline-none cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -52,20 +69,9 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden flex flex-col items-center mt-4 space-y-4 bg-white p-4">
-          <Link href="#" className="text-gray-700 hover:text-gray-900">
-            Features
-          </Link>
-          <Link href="#" className="text-gray-700 hover:text-gray-900">
-            Solutions
-          </Link>
-          <Link href="#" className="text-gray-700 hover:text-gray-900">
-            Pricing
-          </Link>
-          <Link href="#" className="text-gray-700 hover:text-gray-900">
-            FAQ
-          </Link>
+          {renderMenuLinks(menuItems)}
           <hr className="w-full border-gray-200" />
-          <Link href="#" className="text-gray-600 hover:text-gray-900">
+          <Link href="#" className="text-gray-600 hover:text-[#0F0E47]">
             Login
           </Link>
           <Link
