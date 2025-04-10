@@ -60,7 +60,7 @@ const Backup = () => {
           </div>
 
           {/* Backup Status Card */}
-          <div className="flex items-center justify-center rounded-lg h-[fit-content] w-[fit-content] p-8 bg-[#F4F6FA]">
+          <div className="flex items-center justify-center rounded-lg h-[fit-content] w-full p-8 bg-[#F4F6FA]">
             <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
               <div className="flex text-base text-[#0F0E47] justify-between mb-4">
                 <span>Backup Status</span>
