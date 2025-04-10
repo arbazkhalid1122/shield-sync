@@ -16,11 +16,23 @@ export const ContainerScroll = ({
   children: React.ReactNode;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Always call hooks first
   const { scrollYProgress } = useScroll({
     target: containerRef,
   });
 
-  const [isMobile, setIsMobile] = useState(false);
+  const rotate = useTransform(scrollYProgress, [0, 0.5], [20, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1.05, 1]);
+  const translate = useTransform(scrollYProgress, [0, 0.5], [0, -100]);
+
+  const smoothRotate = useSpring(rotate, { damping: 20, stiffness: 100 });
+  const smoothScale = useSpring(scale, { damping: 20, stiffness: 100 });
+  const smoothTranslate = useSpring(translate, {
+    damping: 20,
+    stiffness: 100,
+  });
 
   useEffect(() => {
     const checkMobile = () => {
@@ -33,23 +45,13 @@ export const ContainerScroll = ({
     };
   }, []);
 
-  const scaleDimensions = () => {
-    return isMobile ? [0.7, 0.9] : [1.05, 1];
-  };
-
-  // Tighter scroll range for 40rem container
-  const rotate = useTransform(scrollYProgress, [0, 0.5], [20, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], scaleDimensions());
-  const translate = useTransform(scrollYProgress, [0, 0.5], [0, -100]);
-
-  // Optional: smoothen the transitions with springs
-  const smoothRotate = useSpring(rotate, { damping: 20, stiffness: 100 });
-  const smoothScale = useSpring(scale, { damping: 20, stiffness: 100 });
-  const smoothTranslate = useSpring(translate, { damping: 20, stiffness: 100 });
-
   return (
     <div
-      className="h-[40rem] flex items-center justify-center relative p-2 md:p-10"
+      className={`${
+        isMobile
+          ? ""
+          : "h-[40rem] flex items-center justify-center relative p-2 md:p-10"
+      }`}
       ref={containerRef}
     >
       <div
@@ -58,19 +60,30 @@ export const ContainerScroll = ({
           perspective: "1000px",
         }}
       >
-        <Card
-          rotate={smoothRotate}
-          translate={smoothTranslate}
-          scale={smoothScale}
-        >
-          {children}
-        </Card>
+        {isMobile ? (
+          // No animation on mobile
+          <div className="h-full w-full overflow-hidden">{children}</div>
+        ) : (
+          <Card
+            rotate={smoothRotate}
+            translate={smoothTranslate}
+            scale={smoothScale}
+          >
+            {children}
+          </Card>
+        )}
       </div>
     </div>
   );
 };
 
-export const Header = ({ translate, titleComponent }: any) => {
+export const Header = ({
+  translate,
+  titleComponent,
+}: {
+  translate: MotionValue<number>;
+  titleComponent: string | React.ReactNode;
+}) => {
   return (
     <motion.div
       style={{
