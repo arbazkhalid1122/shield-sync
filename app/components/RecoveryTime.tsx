@@ -1,66 +1,92 @@
-'use client';
-import React from 'react';
+"use client";
+import React, { useEffect, useState } from "react";
+import { useInView } from "./KeyFeatures";
 
 interface RecoveryTimeBoxProps {
-    value: number;
-    maxValue: number;
-    label: string;
-    className?: string;
+  value: number;
+  maxValue: number;
+  label: string;
+  className?: string;
 }
 
 const RecoveryTimeBox: React.FC<RecoveryTimeBoxProps> = ({
-    value,
-    maxValue,
-    label,
-    className
+  value,
+  maxValue,
+  label,
+  className,
 }) => {
-    // Calculate percentage for the progress ring
-    const percentage = (value / maxValue) * 100;
+  const [ref, isVisible] = useInView();
+  const [displayedValue, setDisplayedValue] = useState(0);
 
-    // Calculate stroke dash properties
-    const radius = 50;
-    const circumference = 2 * Math.PI * radius;
-    const strokeDashoffset = circumference - (percentage / 100) * circumference;
+  useEffect(() => {
+    if (!isVisible) return;
 
-    return (
-        <div
-            className={`flex items-center justify-center bg-white rounded-lg shadow-md p-3 ${className || ''
-                }`}
+    let start = 0;
+    const duration = 1500; // total animation time
+    const increment = value / (duration / 30); // frame increment
+
+    const interval = setInterval(() => {
+      start += increment;
+      if (start >= value) {
+        setDisplayedValue(value);
+        clearInterval(interval);
+      } else {
+        setDisplayedValue(Math.ceil(start));
+      }
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, [isVisible, value]);
+
+  const percentage = (displayedValue / maxValue) * 100;
+  const radius = 50;
+  const circumference = 2 * Math.PI * radius;
+  const strokeDashoffset = circumference - (percentage / 100) * circumference;
+
+  return (
+    <div
+      ref={ref}
+      className={`flex items-center justify-center bg-white rounded-lg shadow-md p-3 ${
+        className || ""
+      }`}
+    >
+      <div className="relative flex flex-col items-center justify-center">
+        <svg
+          width="140"
+          height="140"
+          viewBox="0 0 120 120"
+          className="transform -rotate-90"
         >
-            <div className="relative flex flex-col items-center justify-center">
-                {/* SVG Circle Progress */}
-                <svg width="140" height="140" viewBox="0 0 120 120" className="transform -rotate-90">
-                    {/* Background circle */}
-                    <circle
-                        cx="60"
-                        cy="60"
-                        r={radius}
-                        fill="none"
-                        stroke="#70cf98"
-                        strokeWidth="8"
-                    />
-                    {/* Progress circle */}
-                    <circle
-                        cx="60"
-                        cy="60"
-                        r={radius}
-                        fill="none"
-                        stroke="#70cf98"
-                        strokeWidth="8"
-                        strokeDasharray={circumference}
-                        strokeDashoffset={strokeDashoffset}
-                        strokeLinecap="round"
-                    />
-                </svg>
+          <circle
+            cx="60"
+            cy="60"
+            r={radius}
+            fill="none"
+            stroke="#70cf98"
+            strokeWidth="8"
+          />
+          <circle
+            cx="60"
+            cy="60"
+            r={radius}
+            fill="none"
+            stroke="#70cf98"
+            strokeWidth="8"
+            strokeDasharray={circumference}
+            strokeDashoffset={strokeDashoffset}
+            strokeLinecap="round"
+          />
+        </svg>
 
-                {/* Text in the middle */}
-                <div className="absolute flex flex-col items-center justify-center">
-                    <p className="text-lg font-bold text-gray-700">{value}-second</p>
-                    <p className="text-sm text-gray-600">{label}</p>
-                </div>
-            </div>
+        <div className="absolute flex flex-col items-center justify-center">
+          <p className="text-lg font-bold text-gray-700">
+            {displayedValue}-second
+          </p>
+          <p className="text-sm text-gray-600">{label}</p>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default RecoveryTimeBox;
