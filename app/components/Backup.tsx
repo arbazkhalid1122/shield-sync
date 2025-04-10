@@ -1,8 +1,7 @@
-import Image from "next/image";
-import progress from "../../public/div.svg";
 import { FaCircleCheck } from "react-icons/fa6";
 import { FaShield } from "react-icons/fa6";
 import { RiLineChartFill } from "react-icons/ri";
+import ProgressBar from "@/components/ProgressBar";
 
 const Backup = () => {
   return (
@@ -67,11 +66,8 @@ const Backup = () => {
                 <span>Backup Status</span>
                 <span className="text-[#4B5563]">Last backup: 2 min ago</span>
               </div>
-              <Image
-                src={progress}
-                alt="Progress"
-                className="w-full h-auto mb-4"
-              />
+
+              <ProgressBar value={80} />
             </div>
           </div>
         </div>

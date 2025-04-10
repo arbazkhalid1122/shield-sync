@@ -22,7 +22,7 @@ const RecoveryTimeBox: React.FC<RecoveryTimeBoxProps> = ({
     if (!isVisible) return;
 
     let start = 0;
-    const duration = 1500; // total animation time
+    const duration = 1000; // total animation time
     const increment = value / (duration / 30); // frame increment
 
     const interval = setInterval(() => {
