@@ -1,12 +1,15 @@
 import React from "react";
-import { FcBusinessman } from "react-icons/fc";
 import { FaStar } from "react-icons/fa";
-
+import testimonial from ".//../../public/testimonial1.svg";
+import testimonial2 from ".//../../public/testimonial2.svg";
+import testimonial3 from ".//../../public/testimonial3.svg";
+import Image from "next/image";
 interface TestimonialProps {
   name: string;
   title: string;
   company: string;
   quote: string;
+  img: string;
 }
 
 const Testimonial: React.FC<TestimonialProps> = ({
@@ -14,12 +17,21 @@ const Testimonial: React.FC<TestimonialProps> = ({
   title,
   company,
   quote,
+  img,
 }) => {
   return (
     <div className="bg-white rounded-lg p-6 shadow-sm transition-transform duration-300 hover:-translate-y-2 hover:scale-105">
       <div className="flex items-center mb-4">
         <div className="w-12 h-12 mr-4">
-          <FcBusinessman className="w-full h-full rounded-full bg-gray-300" />
+          {/* <FcBusinessman className="w-full h-full rounded-full bg-gray-300" /> */}
+          <Image
+            src={img}
+            alt="testimonial"
+            style={{
+              objectFit: "cover",
+            }}
+            className="w-full h-full rounded-full bg-gray-300"
+          />
         </div>
         <div className="text-base">
           <p className="text-[#0F0E47]">{name}</p>
@@ -41,9 +53,10 @@ const Testimonial: React.FC<TestimonialProps> = ({
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
-      name: "John Smith",
+      name: "Julia",
       title: "IT Director",
       company: "TechCorp",
+      img: testimonial,
       quote:
         "ShieldSync has simplified our backup strategy across multiple cloud providers. It's reliable and cost-effective.",
     },
@@ -51,6 +64,7 @@ const TestimonialsSection: React.FC = () => {
       name: "John Doe",
       title: "DevOps Lead",
       company: "CloudTech",
+      img: testimonial2,
       quote:
         "The automated backup features and instant recovery options have saved us countless hours of manual work.",
     },
@@ -58,6 +72,7 @@ const TestimonialsSection: React.FC = () => {
       name: "Mike Davis",
       title: "CTO",
       company: "DataSafe",
+      img: testimonial3,
       quote:
         "Enterprise-grade security at SMB-friendly pricing. ShieldSync delivers exactly what they promise.",
     },
@@ -78,6 +93,7 @@ const TestimonialsSection: React.FC = () => {
               title={testimonial.title}
               company={testimonial.company}
               quote={testimonial.quote}
+              img={testimonial.img}
             />
           ))}
         </div>

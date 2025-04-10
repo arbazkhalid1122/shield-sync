@@ -7,6 +7,7 @@ interface PricingFeature {
 
 interface PricingCardProps {
   title: string;
+  billingCycle: string;
   price: string;
   features: PricingFeature[];
   ctaText: string;
@@ -23,6 +24,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
   isPopular = false,
   isHighlighted = false,
   onClick,
+  billingCycle,
 }) => {
   return (
     <div
@@ -47,7 +49,11 @@ const PricingCard: React.FC<PricingCardProps> = ({
         >
           {price}
         </span>
-        {price !== "Custom" && <span className="text-sm">/mo</span>}
+        {price !== "Custom" && (
+          <span className="text-sm">{`/${
+            billingCycle === "monthly" ? "mo" : "yr"
+          }`}</span>
+        )}
       </div>
       <ul className="space-y-2 mb-6">
         {features.map((feature, index) => (

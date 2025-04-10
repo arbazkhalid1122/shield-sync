@@ -37,11 +37,12 @@ const PricingSection: React.FC = () => {
           ctaText="Get Started"
           isHighlighted={highlightedPlan === "Free Tier"} // Check if highlighted
           onClick={() => handleHighlightToggle("Free Tier")}
+          billingCycle={billingCycle}
         />
 
         <PricingCard
           title="Basic Plan"
-          price="$49"
+          price={`${billingCycle === "monthly" ? "$10" : "$100"}`}
           features={[
             { text: "100GB Storage" },
             { text: "Priority Support" },
@@ -50,6 +51,7 @@ const PricingSection: React.FC = () => {
           ctaText="Start Free Trial"
           isHighlighted={highlightedPlan === "Basic Plan"}
           onClick={() => handleHighlightToggle("Basic Plan")}
+          billingCycle={billingCycle}
         />
 
         <PricingCard
@@ -63,6 +65,7 @@ const PricingSection: React.FC = () => {
           ctaText="Contact Sales"
           isHighlighted={highlightedPlan === "Pro Plan"}
           onClick={() => handleHighlightToggle("Pro Plan")}
+          billingCycle={billingCycle}
         />
 
         <PricingCard
@@ -76,6 +79,7 @@ const PricingSection: React.FC = () => {
           ctaText="Contact Sales"
           isHighlighted={highlightedPlan === "MSP Plan"}
           onClick={() => handleHighlightToggle("MSP Plan")}
+          billingCycle={billingCycle}
         />
       </div>
     </section>
