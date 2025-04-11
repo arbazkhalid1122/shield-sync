@@ -1,6 +1,7 @@
 "use client";
 import { MdBackup } from "react-icons/md";
 import { FiRefreshCcw } from "react-icons/fi";
+<<<<<<< Updated upstream:app/components/KeyFeatures.tsx
 import LockIcon from "./LockIcon";
 import FeatureCard from "./FeatureCard";
 import { useEffect, useRef, useState } from "react";
@@ -21,13 +22,18 @@ export function useInView(options = { threshold: 0.2 }) {
 
   return [ref, isVisible] as const;
 }
+=======
+import LockIcon from "../LockIcon";
+import FeatureCard from "../FeatureCard";
+import { useInView } from "@/hooks/useInView";
+>>>>>>> Stashed changes:components/features/KeyFeatures.tsx
 
 export default function KeyFeaturesSection() {
   const [ref, isVisible] = useInView();
 
   return (
-    <section className="bg-cloud">
-      <section className="px-4 py-16 md:py-24 bg-[#F1F5F9]">
+    <section className="bg-[#F1F5F9]">
+      <section className="px-4 py-16 md:py-24">
         <div ref={ref} className="container mx-auto max-w-6xl">
           <h2
             className={`text-[#0F0E47] text-3xl md:text-4xl text-center mb-12 transition-opacity duration-700 ${

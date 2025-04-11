@@ -1,28 +1,24 @@
 "use client";
-import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
+
+// Lazy-load the client component only in browser
+const PlatformAnimator = dynamic(() => import("./PlatformAnimator"), {
+  ssr: false, // Prevent it from running on server
+});
 
 export default function HeroSection() {
-  const platforms = ["Azure", "AWS", "GCP"];
-  const [currentPlatformIndex, setCurrentPlatformIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentPlatformIndex(
-        (prevIndex) => (prevIndex + 1) % platforms.length
-      );
-    }, 1500);
-
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []);
-
   return (
     <section className="container mx-auto px-4 py-12 text-center">
       <h1 className="text-3xl sm:text-4xl md:text-5xl text-[#0F0E47] mb-4 leading-48px font-bold">
         Effortless Cloud Storage Backups for
         <span className="inline md:block">
+<<<<<<< Updated upstream:app/components/HeroSection.tsx
           <span className="inline-block rounded-xl mt-2 border border-gray-300 bg-gradient-to-b from-white to-gray-100 px-6 py-3 font-extrabold shadow-md">
             {platforms[currentPlatformIndex]}
           </span>
+=======
+          <PlatformAnimator />
+>>>>>>> Stashed changes:components/services/HeroSection.tsx
         </span>
       </h1>
       <p className="max-w-3xl mx-auto text-[#4B5563] mb-8">
