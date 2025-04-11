@@ -1,17 +1,7 @@
 import CompanyLogos from "./CompanyLogos";
-<<<<<<< HEAD:app/components/CompanyLogosSection.tsx
-<<<<<<< Updated upstream:app/components/CompanyLogosSection.tsx
-import KeyFeaturesSection from "./KeyFeatures";
-=======
-// import KeyFeaturesSection from "./features/KeyFeatures";
->>>>>>> Stashed changes:components/CompanyLogosSection.tsx
-=======
-import KeyFeaturesSection from "./features/KeyFeatures";
->>>>>>> d27af18298910645f0ef42c31025c01c3bc72307:components/CompanyLogosSection.tsx
 
 export default function CompanyLogosSection() {
   return (
-    // <section className="p-4 bg-gradient-to-b from-white to-cloud-light">
     <section className="px-4 bg-gradient-to-b from-white to-[#F8FAFC]">
       <div className="container mx-auto max-w-6xl">
         {/* Main Headline */}
@@ -27,11 +17,9 @@ export default function CompanyLogosSection() {
           & Recovery
         </p>
 
-        {/* Company Logos */}
         <CompanyLogos />
       </div>
     </section>
 
-    // </section>
   );
 }

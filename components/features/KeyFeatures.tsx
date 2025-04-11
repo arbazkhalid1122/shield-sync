@@ -1,37 +1,9 @@
 "use client";
 import { MdBackup } from "react-icons/md";
 import { FiRefreshCcw } from "react-icons/fi";
-<<<<<<< HEAD:app/components/KeyFeatures.tsx
-<<<<<<< Updated upstream:app/components/KeyFeatures.tsx
-import LockIcon from "./LockIcon";
-import FeatureCard from "./FeatureCard";
-=======
-import LockIcon from "../LockIcon";
-import FeatureCard from "../FeatureCard";
->>>>>>> d27af18298910645f0ef42c31025c01c3bc72307:components/features/KeyFeatures.tsx
-import { useEffect, useRef, useState } from "react";
-
-export function useInView(options = { threshold: 0.2 }) {
-  const ref = useRef(null);
-  const [isVisible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      setVisible(entry.isIntersecting);
-    }, options);
-
-    if (ref.current) observer.observe(ref.current);
-
-    return () => observer.disconnect();
-  }, []);
-
-  return [ref, isVisible] as const;
-}
-=======
-import LockIcon from "../LockIcon";
-import FeatureCard from "../FeatureCard";
 import { useInView } from "@/hooks/useInView";
->>>>>>> Stashed changes:components/features/KeyFeatures.tsx
+import FeatureCard from "../FeatureCard";
+import LockIcon from "../LockIcon";
 
 export default function KeyFeaturesSection() {
   const [ref, isVisible] = useInView();
