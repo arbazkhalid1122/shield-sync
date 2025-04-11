@@ -1,9 +1,14 @@
 "use client";
 import { MdBackup } from "react-icons/md";
 import { FiRefreshCcw } from "react-icons/fi";
+<<<<<<< HEAD:app/components/KeyFeatures.tsx
 <<<<<<< Updated upstream:app/components/KeyFeatures.tsx
 import LockIcon from "./LockIcon";
 import FeatureCard from "./FeatureCard";
+=======
+import LockIcon from "../LockIcon";
+import FeatureCard from "../FeatureCard";
+>>>>>>> d27af18298910645f0ef42c31025c01c3bc72307:components/features/KeyFeatures.tsx
 import { useEffect, useRef, useState } from "react";
 
 export function useInView(options = { threshold: 0.2 }) {

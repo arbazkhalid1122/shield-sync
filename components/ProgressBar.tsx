@@ -1,9 +1,5 @@
 "use client";
-<<<<<<< Updated upstream
-import { useInView } from "@/app/components/KeyFeatures";
-=======
 import { useInView } from "@/hooks/useInView";
->>>>>>> Stashed changes
 import React, { useEffect, useState } from "react";
 
 interface ProgressBarProps {

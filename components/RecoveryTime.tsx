@@ -1,10 +1,6 @@
 "use client";
 import { useInView } from "@/hooks/useInView";
 import React, { useEffect, useState } from "react";
-<<<<<<< Updated upstream:app/components/RecoveryTime.tsx
-import { useInView } from "./KeyFeatures";
-=======
->>>>>>> Stashed changes:components/RecoveryTime.tsx
 
 interface RecoveryTimeBoxProps {
   value: number;

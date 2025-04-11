@@ -1,9 +1,13 @@
 import CompanyLogos from "./CompanyLogos";
+<<<<<<< HEAD:app/components/CompanyLogosSection.tsx
 <<<<<<< Updated upstream:app/components/CompanyLogosSection.tsx
 import KeyFeaturesSection from "./KeyFeatures";
 =======
 // import KeyFeaturesSection from "./features/KeyFeatures";
 >>>>>>> Stashed changes:components/CompanyLogosSection.tsx
+=======
+import KeyFeaturesSection from "./features/KeyFeatures";
+>>>>>>> d27af18298910645f0ef42c31025c01c3bc72307:components/CompanyLogosSection.tsx
 
 export default function CompanyLogosSection() {
   return (
