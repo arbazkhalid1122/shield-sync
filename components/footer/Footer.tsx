@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
-import shield from "../../public/ShieldFrame.svg";
+import shield from "@/public/ShieldFrame.svg";
 import Image from "next/image";
-import FloatingDockDemo from "./FloatingDocks";
+import FloatingDockDemo from "../FloatingDocks";
 const Footer = () => {
   return (
     <footer className="w-full bg-[#0F0E47] text-white py-12">

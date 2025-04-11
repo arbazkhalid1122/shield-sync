@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FiMenu, FiX } from "react-icons/fi";
-import Shield from "../../public/ShieldSync.svg";
+import Shield from "@/public/ShieldSync.svg";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

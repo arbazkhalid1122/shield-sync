@@ -1,9 +1,8 @@
-import Head from "next/head";
-import container from "../../public/Container (1).svg";
-import container1 from "../../public/Container (2).svg";
-import FR from "../../public/FR.svg";
-import NLST from "../../public/NLST.svg";
-import Bar from "../../public/Bar.svg";
+import container from "@/public/Container (1).svg";
+import container1 from "@/public/Container (2).svg";
+import FR from "@/public/FR.svg";
+import NLST from "@/public/NLST.svg";
+import Bar from "@/public/Bar.svg";
 import Image from "next/image";
 import { FaCheck } from "react-icons/fa6";
 

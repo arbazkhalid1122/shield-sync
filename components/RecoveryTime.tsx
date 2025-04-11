@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useInView } from "./KeyFeatures";
+import { useInView } from "./features/KeyFeatures";
 
 interface RecoveryTimeBoxProps {
   value: number;

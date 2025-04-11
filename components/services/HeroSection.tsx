@@ -20,7 +20,7 @@ export default function HeroSection() {
       <h1 className="text-3xl sm:text-4xl md:text-5xl text-[#0F0E47] mb-4 leading-48px font-bold">
         Effortless Cloud Storage Backups for
         <span className="inline md:block">
-          <span className="inline-block rounded-xl mt-2 border border-gray-300 bg-gradient-to-b from-white to-gray-100 px-6 py-3 font-extrabold shadow-md">
+          <span className="inline-block rounded-xl ml-2 mt-2 border border-gray-300 bg-gradient-to-b from-white to-gray-100 px-6 py-3 font-extrabold shadow-md">
             {platforms[currentPlatformIndex]}
           </span>
         </span>

@@ -1,8 +1,8 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
-import testimonial from ".//../../public/testimonial1.svg";
-import testimonial2 from ".//../../public/testimonial2.svg";
-import testimonial3 from ".//../../public/testimonial3.svg";
+import testimonial from "@/public/testimonial1.svg";
+import testimonial2 from "@/public/testimonial2.svg";
+import testimonial3 from "@/public/testimonial3.svg";
 import Image from "next/image";
 interface TestimonialProps {
   name: string;
