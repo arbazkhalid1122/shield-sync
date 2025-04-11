@@ -1,5 +1,5 @@
 import CompanyLogos from "./CompanyLogos";
-import KeyFeaturesSection from "./KeyFeatures";
+import KeyFeaturesSection from "./features/KeyFeatures";
 
 export default function CompanyLogosSection() {
   return (

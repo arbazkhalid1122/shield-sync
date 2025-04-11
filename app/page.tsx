@@ -1,13 +1,13 @@
-import Backup from "./components/Backup";
-import TestimonialsSection from "./components/TestimonialsSection";
-import PricingSection from "./components/PricingSection";
-import FAQSection from "./components/FAQSection";
-import CTASection from "./components/CTASection";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import FeaturesGrid from "./components/FeaturesGrid";
-import CompanyLogosSection from "./components/CompanyLogosSection";
+import TestimonialsSection from "../components/Testimonial/TestimonialsSection";
+import PricingSection from "@/components/Pricing/PricingSection";
+import FAQSection from "@/components/FAQ/FAQSection";
+import CTASection from "../components/CTA/CTASection";
+import Footer from "@/components/footer/Footer";
+import Navbar from "@/components/navbar/Navbar";
+import HeroSection from "@/components/services/HeroSection";
+import FeaturesGrid from "@/components/FeaturesGrid";
+import CompanyLogosSection from "../components/CompanyLogosSection";
+import Backup from "@/components/Backup/Backup";
 
 export default function Home() {
   return (
